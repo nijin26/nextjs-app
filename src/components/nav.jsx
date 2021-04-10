@@ -1,4 +1,5 @@
-import { sx } from "theme-ui";
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import Link from "next/link";
 
 const Nav = () => (
