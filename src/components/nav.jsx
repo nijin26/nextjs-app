@@ -1,4 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
+
 import { jsx } from "theme-ui";
 import Link from "next/link";
 
@@ -28,7 +30,12 @@ const Nav = () => (
       </Link>
 
       <Link href="/notes">
-        <a sx={{ color: "text", fontSize: 3, cursor: "pointer" }}>notes</a>
+        <a
+          sx={{ color: "text", fontSize: 3, cursor: "pointer" }}
+          href={process.env.APP_URL}
+        >
+          notes
+        </a>
       </Link>
     </nav>
   </header>
