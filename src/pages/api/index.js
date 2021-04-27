@@ -1,8 +1,11 @@
-// pages/api/data.js
-// route => /api/data
+import nc from "next-connect";
 
-export default (req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({ message: "hello" }));
-};
+const handler = nc()
+  .get((req, res) => {
+    res.status(201).json({ name: "Nijin" });
+  })
+  .post((req, res) => {
+    res.json({ message: "Posted" });
+  });
+
+export default handler;
