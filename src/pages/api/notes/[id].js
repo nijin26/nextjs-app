@@ -1,6 +1,6 @@
 // pages/api/note/[id].js
 import nc from "next-connect";
-import notes from "../../../src/data/data";
+import notes from "../../../data/data";
 
 const getNote = (id) => notes.find((n) => n.id === parseInt(id));
 
